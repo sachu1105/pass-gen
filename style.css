@@ -1,0 +1,159 @@
+:root {
+    --primary-gradient-start: rgb(255, 1, 1);
+    --primary-gradient-end: rgb(152, 1, 1);
+    --text-color: aliceblue;
+    --background-color: #fff;
+    --input-text-color: #333;
+    --heading-color: #002765;
+    --highlight-color: rgb(255, 255, 0);
+    --button-bg-color: #fff;
+    --button-text-color: black;
+    --button-hover-bg-color: #f8d200;
+    --button-icon-width: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, var(--primary-gradient-start), var(--primary-gradient-end)); 
+    color: var(--text-color);
+}
+
+.container {
+    margin: 12%;
+    width: 40%;
+    max-width: 500px;
+}
+
+.display {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: var(--background-color);
+    color: var(--input-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 20px;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 45px;
+}
+
+.container span {
+    color: var(--highlight-color);
+    border-bottom: solid 4px var(--highlight-color);
+    margin-bottom: 7px;
+}
+
+.display img {
+    width: var(--button-icon-width);
+    cursor: pointer;
+}
+
+.display input {
+    outline: 0;
+    border: 0;
+    font-size: 24px;
+}
+
+.container button img {
+    width: var(--button-icon-width);
+    margin-right: 10px;
+}
+
+.container button {
+    border: 0;
+    outline: 0;
+    background: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-size: 18px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.container button:hover {
+    background: var(--button-hover-bg-color);
+    transform: translateY(-2px);
+}
+
+@media screen and (max-width: 1200px) {
+    .container h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .display {
+        padding: 16px 12px;
+    }
+
+    .display input {
+        font-size: 18px;
+    }
+
+    .container button {
+        padding: 12px 16px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: 5%;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .display {
+        padding: 12px 10px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .display input {
+        font-size: 16px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .display img {
+        width: 25px;
+        align-self: center;
+    }
+
+    .container button {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .container button img {
+        width: 25px;
+    }
+}
